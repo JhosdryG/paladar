@@ -267,12 +267,12 @@
               nuestras redes sociales, o envíanos un correo, estaremos feliz de
               atenderte.
             </p>
-            <form>
-              <div
-                class="form_group"
-                method="POST"
-                action="/.netlify/functions/prueba"
-              >
+            <form
+              data-netlify-recaptcha="true"
+              method="POST"
+              action="/.netlify/functions/prueba"
+            >
+              <div class="form_group">
                 <label for="nombre">
                   Nombre:
                   <input type="text" name="nombre" id="nombre" /> </label
@@ -286,6 +286,8 @@
                   id="interes"
                 ></textarea>
               </label>
+              <div data-netlify-recaptcha="true"></div>
+              <input type="submit" value="Enviar" class="orange_button" />
             </form>
           </div>
         </section>
